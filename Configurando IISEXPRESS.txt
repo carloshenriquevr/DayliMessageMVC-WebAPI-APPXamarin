@@ -1,0 +1,1 @@
+https://ilovecode.com.br/xamarin-como-consumir-uma-api-local-que-roda-no-iis-express-no-emulador/
