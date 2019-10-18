@@ -45,7 +45,8 @@ namespace MessagesApp.Views
         public void UpdateDatas()
         {
             var messages = serviceDBMessages.CarregarDados();
-            MessageViewList.ItemsSource = messages.Where(item => item.MessageDate.ToString("dd/MM/yyyy") == DateTime.Now.ToString("dd/MM/yyyy")).Take(1).ToList() ;
+            //MessageViewList.ItemsSource = messages.Where(item => item.MessageDate.ToString("dd/MM/yyyy") == DateTime.Now.ToString("dd/MM/yyyy")).Take(1).ToList() ;
+            MessageViewList.ItemsSource = messages.OrderByDescending(item => item.MessageId).Take(1).ToList();
         }
 
     }
